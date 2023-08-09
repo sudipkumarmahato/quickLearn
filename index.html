@@ -56,7 +56,21 @@
 
 
     <script>
-        const countDownDate = new Date("Oct 9, 2023 00:00:00").getTime();
+        // Check if there's a countdown timestamp stored in local storage
+        const storedCountdownTimestamp = localStorage.getItem("countdownTimestamp");
+
+        let countDownDate;
+
+        if (storedCountdownTimestamp) {
+            // If there's a stored timestamp, use it
+            countDownDate = parseInt(storedCountdownTimestamp, 10);
+        } else {
+            // Otherwise, set the countdown date to Oct 9, 2023
+            countDownDate = new Date("Oct 9, 2023 00:00:00").getTime();
+            // Store the initial timestamp in local storage
+            localStorage.setItem("countdownTimestamp", countDownDate);
+        }
+
         const x = setInterval(() => {
             const now = new Date().getTime();
             const distance = countDownDate - now;
@@ -68,13 +82,12 @@
 
             document.getElementById("days").innerHTML = days < 10 ? `0${days}` : days;
             document.getElementById("hours").innerHTML = hours < 10 ? `0${hours}` : hours;
-            document.getElementById("minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;;
-            document.getElementById("seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 
         }, 1000);
-
-
     </script>
+
 
 </body>
 

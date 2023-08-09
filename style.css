@@ -103,7 +103,6 @@
 .button-container {
   display: flex;
   gap: 15px;
-  /* Adjust this value as needed */
 }
 
 .button-49 {
@@ -113,7 +112,6 @@
   position: relative;
 }
 
-/* Button CSS */
 .button-49,
 .button-49:after {
   width: 150px;
@@ -224,27 +222,20 @@
   .button-49:after {
     width: 150px;
     height: 66px;
-    /* Adjust as needed */
     line-height: 68px;
-    /* Adjust as needed */
     font-size: 16px;
-    /* Adjust as needed */
   }
 
   .content h1 {
     font-size: 33px;
-    /* Adjust as needed */
   }
 
   .launch-time div p {
     font-size: 30px;
-    /* Adjust as needed */
   }
 
   .rocket {
     width: 80px;
-    /* Adjust as needed */
     right: 5%;
-    /* Adjust as needed */
   }
 }
