@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="logo">QuickLearn</h1>
+
+        <div class="content">
+            <h2>App is Under Development</h2>
+            <p style="font-weight: 200;">Unlocking Knowledge, Elevating Nepal: Learn, Grow, Succeed!</p>
+            <h1>We're <span>Launching</span> Soon</h1>
+
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+
+
+            <div class="button-container">
+                <a style="text-decoration: none" href=" https://traffyic.com/" target="_blank">
+                    <button class="button-49" type="button">Contact Us</button>
+                </a>
+            </div>
+
+        </div>
+
+        <img src="images/rocket.png" class="rocket">
+
+    </div>
+
+
+    <script>
+        const countDownDate = new Date("Oct 9, 2023 00:00:00").getTime();
+        const x = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days < 10 ? `0${days}` : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? `0${hours}` : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;;
+
+        }, 1000);
+
+
+    </script>
+
+</body>
+
+</html>
