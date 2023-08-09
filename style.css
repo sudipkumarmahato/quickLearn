@@ -32,6 +32,37 @@
   opacity: 0.9;
 }
 
+
+h1 span {
+  display: inline-block;
+  transform-origin: center;
+  animation: scaleAnim 1s infinite alternate, glitterAnim 2s infinite;
+}
+
+@keyframes scaleAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes glitterAnim {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
 .container .logo {
   color: white;
 
@@ -80,7 +111,7 @@
 }
 
 .rocket {
-  width: 250px;
+  width: 100px;
   position: absolute;
   right: 10%;
   bottom: 0;
